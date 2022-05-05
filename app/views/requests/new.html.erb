@@ -1,0 +1,6 @@
+<%= render 'shared/errors', resource: @request %>
+<%= form_with model: @request, local: true do |f| %>
+  <%= f.label :body %>
+  <%= f.text_field :body %>
+  <%= f.submit %>
+<% end %>
