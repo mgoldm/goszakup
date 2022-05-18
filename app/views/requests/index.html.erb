@@ -6,7 +6,9 @@
     <th>Action</th>
     <th>Responses amount</th>
   </tr>
-  <%= render @requests %>
+  <% @requests.each do |request| %>
+    <%= render 'request', request: request %>
+  <% end %>
 </table>
 
 <p><%= link_to 'New Request', new_request_path %></p>

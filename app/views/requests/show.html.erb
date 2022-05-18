@@ -1,8 +1,10 @@
-<h>Результат поиска по вашему запросу</h>
+<h1>Результат поиска по вашему запросу</h1>
 <table>
   <tr>
     <th>Link title</th>
     <th>link</th>
   </tr>
-  <%= render @responses %>
+  <% @request.responses.each do |response| %>
+    <%= render 'response', response: response %>
+  <% end %>
 </table>

@@ -1,6 +1,8 @@
 <tr>
   <td><%= request.body %></td>
-  <td><%= request.key_words %></td>
+  <% request.key_words.each do |key_word| %>
+    <td><%= key_word.body %></td>
+  <% end %>
   <td><%= link_to 'Show', request_path(request) %></td>
   <td><%= request.responses.count %></td>
 </tr>
