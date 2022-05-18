@@ -1,1 +1,8 @@
-<%=@request.body %>
+<h>Результат поиска по вашему запросу</h>
+<table>
+  <tr>
+    <th>Link title</th>
+    <th>link</th>
+  </tr>
+  <%= render @responses %>
+</table>

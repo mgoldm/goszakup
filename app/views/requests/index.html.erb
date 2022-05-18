@@ -1,6 +1,12 @@
 <h1> All requests</h1>
-<% @requests.each do |request| %>
-  <%= request.body %>
-  <%= link_to 'Show', request_path(request) %>
-<% end %>
+<table>
+  <tr>
+    <th>Body</th>
+    <th>Key words</th>
+    <th>Action</th>
+    <th>Responses amount</th>
+  </tr>
+  <%= render @requests %>
+</table>
+
 <p><%= link_to 'New Request', new_request_path %></p>

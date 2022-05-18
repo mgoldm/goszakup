@@ -7,10 +7,12 @@ class RequestsController < ApplicationController
 
   def show
     @request = Request.find(params[:id])
+    @responses=@request.responses
   end
 
   def new
     @request = Request.new
+    @request.key_words.new
   end
 
   def create
@@ -26,6 +28,6 @@ class RequestsController < ApplicationController
   private
 
   def request_params
-    params.require(:request).permit(:body)
+    params.require(:request).permit(:body, key_words_attributes: %i[body])
   end
 end

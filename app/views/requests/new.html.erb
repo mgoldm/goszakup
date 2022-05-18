@@ -1,6 +1,11 @@
+<h1> Input word for request</h1>
 <%= render 'shared/errors', resource: @request %>
 <%= form_with model: @request, local: true do |f| %>
-  <%= f.label :body %>
+  <%= f.label 'Word for request' %>
   <%= f.text_field :body %>
+  <%= f.fields_for :key_words do |l| %>
+    <%= render 'shared/words_field', f: l %>
+    <%= link_to_add_association 'add word', f, :key_words, partial: 'shared/words_field' %>
+  <% end %>
   <%= f.submit %>
 <% end %>

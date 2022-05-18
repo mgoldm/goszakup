@@ -25,6 +25,7 @@ gem 'devise'
 gem 'cocoon'
 gem 'mechanize'
 gem 'watir'
+gem 'cocoon'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
